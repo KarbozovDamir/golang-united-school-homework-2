@@ -15,13 +15,13 @@ const (
 
 var area float64
 
-func CalcSquare(sideLen float64, sideSquare figure) float64 {
-	if sideSquare == SidesTriangle {
-		area = (math.Sqrt(3) / 4) * math.Pow(sideLen, 2)
-	} else if sideSquare == SidesSquare {
-		area = sideLen * sideLen
-	} else if sideSquare == SidesCircle {
-		area = Pi * (sideLen * sideLen)
+func CalcSquare(sideLen float64, sideNum figure) float64 {
+	if sideNum == SidesTriangle {
+		return (math.Sqrt(3) / 4) * math.Pow(sideLen, 2)
+	} else if sideNum == SidesSquare {
+		return sideLen * sideLen
+	} else if sideNum == SidesCircle {
+		return Pi * (sideLen * sideLen)
 	}
-	return area
+	return 0
 }
