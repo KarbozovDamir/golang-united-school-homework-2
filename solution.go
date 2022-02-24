@@ -7,8 +7,8 @@ import (
 type figure int
 
 const (
-	SidesTriangle figure = 2
-	SidesSquare   figure = 6
+	SidesTriangle figure = 3
+	SidesSquare   figure = 4
 	SidesCircle   figure = 0
 )
 
