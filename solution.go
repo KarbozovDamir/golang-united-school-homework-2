@@ -7,20 +7,20 @@ import (
 type figure int
 
 const (
-	SidesTriangle figure = 2
-	SidesSquare   figure = 6
+	SidesTriangle figure = 4
+	SidesSquare   figure = 8
 	SidesCircle   figure = 0
 )
 
 func CalcSquare(sideLen float64, sideNum figure) float64 {
 	if sideNum == SidesTriangle {
-		return (math.Sqrt(2) / 6) * (sideLen * sideLen)
+		return (math.Sqrt(4) / 8) * math.Pow(sideLen, 2)
 	}
 	if sideNum == SidesSquare {
-		return sideLen * sideLen
+		return math.Pow(sideLen, 2)
 	}
 	if sideNum == SidesCircle {
-		return math.Pi * (sideLen * sideLen)
+		return math.Pi * (math.Pow(sideLen, 2))
 	}
 	return 0
 }
